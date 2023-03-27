@@ -180,9 +180,10 @@ class XiaomiWaterPurifierSensor(Entity):
              self._data_key['key'] is TEST19['key'] or \
              self._data_key['key'] is TEST20['key'] or \
              self._data_key['key'] is TEST21['key'] or \
-             self._data_key['key'] is TEST22['key'] or \
-        else:
+             self._data_key['key'] is TEST22['key']:
             return ''
+        else:
+            return '%'
         return '%'
 
     @property
