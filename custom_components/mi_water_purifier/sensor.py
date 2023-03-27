@@ -285,9 +285,8 @@ class XiaomiWaterPurifier(Entity):
         """Parse data."""
         try:
             data = {}
-            """status = self._device.get_properties(["all"])"""
-            """status = self._device.send('get_prop', [])"""
-            status = self._device.get_properties(["all"])
+            """status = self._device.get_properties(["all"])   ≤ªø…”√"""
+            status = self._device.send('get_prop', [])
             data[TAP_WATER_QUALITY['key']] = status[0]
             data[FILTERED_WATER_QUALITY['key']] = status[1]
             pfd = int((status[11] - status[3]) / 24)
