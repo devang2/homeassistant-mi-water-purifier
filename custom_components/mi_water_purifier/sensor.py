@@ -176,8 +176,13 @@ class XiaomiWaterPurifierSensor(Entity):
              self._data_key['key'] is REAR_TOTAL_TIME['key'] or \
              self._data_key['key'] is REAR_REMAINING_TIME['key']:
               return 'days'
+        elif self._data_key['key'] is TEST18['key'] or \
+             self._data_key['key'] is TEST19['key'] or \
+             self._data_key['key'] is TEST20['key'] or \
+             self._data_key['key'] is TEST21['key'] or \
+             self._data_key['key'] is TEST22['key'] or \
         else:
-            return '%'
+            return ''
         return '%'
 
     @property
